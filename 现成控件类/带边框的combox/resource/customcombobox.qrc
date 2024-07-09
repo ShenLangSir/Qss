@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/custombobox.qss</file>
+        <file>qss/custombobox2.qss</file>
+        <file>image/up.png</file>
+        <file>image/down.png</file>
+    </qresource>
+</RCC>

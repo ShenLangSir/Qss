@@ -1,0 +1,89 @@
+/*设置的是整体QTabBar*/
+QTabBar {
+    font-size: 14px;
+    background: rgba(33, 36, 38, 255);
+    border: 1px solid rgba(47, 51, 54, 255);
+    color: rgba(80, 87, 92, 1);
+    width: 100px;
+    height: 30px;
+}
+
+/*设置的是每个item*/
+QTabBar::tab {
+    font-size: 14px;
+    background: rgba(33, 36, 38, 255);
+    border: 1px solid rgba(47, 51, 54, 255);
+    color: rgba(80, 87, 92, 1);
+    width: 100px;
+    height: 30px;
+}
+
+QTabBar::tab:hover {
+    background: rgba(37, 41, 43, 255);
+}
+
+QTabBar::tab:pressed {
+    background: rgba(37, 241, 43, 255);
+}
+
+QTabBar::tab:selected {
+    background: rgba(137, 41, 43, 255);
+}
+
+
+/*选中项的前一项*/
+QTabBar::tab:previous-selected {
+    background: rgba(137, 41, 43, 255);
+}
+
+/*选中项的后一项*/
+QTabBar::tab:next-selected {
+    background: rgba(137, 41, 43, 255);
+}
+
+
+/*第一项*/
+QTabBar::tab:first {
+    background: rgba(137, 41, 43, 255);
+}
+
+QTabBar::tab:first:selected {
+    background: rgba(137, 41, 43, 255);
+}
+
+
+/*除了第一和最后一个*/
+QTabBar::tab:middle {
+    background: rgba(137, 41, 43, 255);
+}
+
+
+/*最后一项*/
+QTabBar::tab:last {
+    background: rgba(137, 41, 43, 255);
+}
+
+/*只有一项的时候触发*/
+QTabBar::tab:only-one {
+    background: rgba(137, 41, 43, 255);
+
+}
+
+/*不知道是啥*/
+QTabBar::tear {
+    image: url(tear_indicator.png);
+}
+
+QTabBar::scroller {
+    /* the width of the scroll buttons */
+    width: 20px;
+}
+
+QTabBar::close-button {
+    image: url(close.png);
+    subcontrol-position: left;
+}
+
+QTabBar::close-button:hover {
+    image: url(close-hover.png)
+}

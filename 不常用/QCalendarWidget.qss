@@ -1,0 +1,7 @@
+QCalendarWidget QToolButton::menu-indicator {
+    image: None;
+}
+
+QCalendarWidget QTableView {
+    border-width: 0px;
+}

@@ -1,0 +1,5 @@
+QStatusBar::item{
+    border:0px solid #404244;
+    border-radius:3px;
+    }
+    

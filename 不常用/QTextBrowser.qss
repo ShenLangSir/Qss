@@ -1,0 +1,59 @@
+QTextBrowser {
+    border-width: 0px;
+    /* 必须设置圆角 宽度才生效 很奇怪 */
+    border-radius: 0px;
+}
+
+/* 滚动条 */
+QTextBrowser QScrollBar::vertical {
+    width: 18px;
+    height: 207px;
+    background: #EBEBEB;
+    padding-top: 21px;
+    /*上预留位置（放置向上箭头）*/
+    padding-bottom: 21px;
+    /*下预留位置（放置向下箭头）*/
+}
+
+QTextBrowser QScrollBar::handle::vertical {
+    /*滑块主体*/
+    width: 14px;
+    background: #D6D6D6;
+    border-radius: 2px;
+    margin-left: 2px;
+    /*滑块与滑轨左边的距离*/
+    margin-right: 2px;
+    /*滑块与滑轨右边的距离*/
+}
+
+QTextBrowser QScrollBar::add-line::vertical {
+
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向下翻滚.png);
+
+}
+
+QTextBrowser QScrollBar::add-line::vertical:hover {
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向下翻滚-高亮.png);
+}
+
+QTextBrowser QScrollBar::add-line::vertical:pressed {
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向下翻滚-按下.png);
+}
+
+QTextBrowser QScrollBar::sub-line::vertical {
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向上翻滚.png);
+}
+
+QTextBrowser QScrollBar::sub-line::vertical:hover {
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向上翻滚-高亮.png);
+}
+
+QTextBrowser QScrollBar::sub-line::vertical:pressed {
+    background: rgba(0, 0, 0, 0);
+    image: url(:/icon/向上翻滚-按下.png);
+}

@@ -1,0 +1,65 @@
+/*垂直滚动条  , 将 horizontal 替换为  vertical即可,或者删除horizontal */
+/*水平滚动条*/
+QScrollBar:horizontal {
+    background: #1C1C21;
+    /*滚动条左边距,如果是0,滑块会盖在箭头上,和add-line的width相等,如果不想要addline按钮,都设置0*/
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+/*滑块*/
+QScrollBar::handle:horizontal {
+    border-radius: 8px;
+    background: #3B3D47;
+    border-image: url(:/icon/1.png);
+}
+
+/*后退按钮*/
+QScrollBar::add-line:horizontal {
+    width: 18px;
+    height: 20px;
+    /* 按钮的位置,必须设置,可以设置 上下左右, 无论是横向还是纵向 */
+    subcontrol-position: right;
+    background: url(:/icon/1.png);
+    background-color: rgb(81, 81, 86);
+}
+
+QScrollBar::add-line:horizontal:hover {
+    background: url(:/icon/2.png);
+    background-color: rgb(91, 91, 96);
+}
+
+QScrollBar::add-line:horizontal:pressed {
+    background: url(:/icon/3.png);
+    background-color: rgb(91, 91, 96);
+}
+
+/*前进按钮*/
+QScrollBar::sub-line:horizontal {
+    width: 18px;
+    /* 按钮的位置,必须设置,可以设置 上下左右, 无论是横向还是纵向 */
+    subcontrol-position: left;
+    background: url(:/icon/1.png);
+    background-color: rgb(81, 81, 86);
+}
+
+QScrollBar::sub-line:horizontal:hover {
+    background: url(:/icon/2.png);
+    background-color: rgb(91, 91, 96);
+}
+
+QScrollBar::sub-line:horizontal:pressed {
+    background: url(:/icon/3.png);
+    background-color: rgb(91, 91, 96);
+}
+
+
+/*还未划过的地方*/
+QScrollBar::add-page:horizontal {
+    background-color: rgb(255, 91, 96);
+}
+
+/*划过的地方*/
+QScrollBar::sub-page:horizontal {
+    background-color: rgb(255, 91, 255);
+}

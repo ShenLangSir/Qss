@@ -1,0 +1,79 @@
+*{
+    font-size: 14px;
+    font-family: "PingFang SC";
+    font-weight: 400;
+    border-radius: 5px;
+    color:#00ff00;
+}
+/*QWidget#CustomComboxBox[CustomStyle="unchecked"]{
+background: #24262A;
+}
+QWidget#CustomComboxBox[CustomStyle="checked"]{
+background: #3B4047;
+}*/
+QFrame[CustomStyle="unchecked"]{
+background: #24262A;
+border:1px solid #7A88A8;
+border-radius:5px;
+}
+QFrame[CustomStyle="checked"]{
+background: #3B4047;
+border:1px solid #7A88A8;
+border-radius:5px;
+}
+QPushButton#checkButton
+{
+padding-left:12px;
+margin-right:12px;
+text-align: left;
+color:#CFE7F7;
+font-weight: bold;
+background: #24262A;
+background-image:url(":/image/down.png");
+background-repeat: no-repeat;
+background-position: right center;
+border:0px;
+}
+QPushButton#checkButton:unchecked
+{
+background:#24262A;
+background-image:url(":/image/up.png");
+background-repeat: no-repeat;
+background-position: right center;
+}
+QPushButton#checkButton:checked
+{
+background:#3B4047;
+background-image:url(":/image/up.png");
+background-repeat: no-repeat;
+background-position: right center;
+}
+
+QPushButton[CustomStyle="checked"]{
+background:#464C54;
+font-weight: bold;
+color:#FFFFFF;
+text-align: left;
+padding-left:12px;
+}
+
+QPushButton[CustomStyle="unchecked"]{
+background:#3B4047;
+color:#CFE7F7;
+font-size:14px;
+border:0px;
+font-weight:normal;
+text-align: left;
+padding-left:12px;
+}
+
+QPushButton[CustomStyle="unchecked"]:hover{
+background:#4B5057;
+color:#CFE7F7;
+font-size:14px;
+border:0px;
+font-weight:normal;
+text-align: left;
+padding-left:12px;
+}
+

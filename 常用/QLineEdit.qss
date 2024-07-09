@@ -1,0 +1,23 @@
+﻿QLineEdit {
+    background: #2E2F30;
+    border: 1px solid #FF0000;
+    border-radius: 3px;
+    padding: 2px;
+    /* 被选中的文字的颜色 */
+    selection-color: red;
+    /* 被选中的文字的背景颜色 */
+    selection-background-color: blue;
+
+    /* 设置密码字符的样式,mac下测试无效 */
+    lineedit-password-character: "X";
+    /* 更改密码掩码延迟。 有效 */
+    lineedit-password-mask-delay: 1111;
+}
+
+QLineEdit:focus {
+    background: #00FFFF;
+}
+
+QLineEdit:hover {
+    background: #00FF00;
+}

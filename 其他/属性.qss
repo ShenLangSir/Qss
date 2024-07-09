@@ -1,0 +1,197 @@
+/* ----------------------------------------------------------------*/
+/* 潜规则 */
+QToolButton {
+    /* 四向时,顺序为上右下左,例如 上
+    border-style: dotted(上) solid(右) dashed(下) double(左); */
+}
+
+/* ----------------------------------------------------------------*/
+/* position relative | absolute	使用左、右、上和下指定的偏移量是相对坐标还是绝对坐标。
+如果未指定此属性，则默认为relativ*/
+
+/* ----------------------------------------------------------------*/
+/*子控件在父控件中的位置 */
+QDateEdit::drop-down {
+    /*父元素中子控件的起始矩形。如果未指定此属性，则默认为填充。*/
+    subcontrol-origin: padding;
+    /* 子控件在subcontrol-origin指定的原点矩形内的对齐。如果未指定此属性，则默认为依赖于子控件的值 */
+    subcontrol-position: center right;
+}
+
+
+/* ----------------------------------------------------------------*/
+/* color */
+/* opacity 小部件的不透明度。取值范围为0(透明)~ 255(不透明)。目前，这只支持tooltips。 */
+
+/* ----------------------------------------------------------------*/
+/* background */
+QToolButton {
+    /* background-image 设置背景图片, 图片的带下是固定的,不会根据控件变化,如果图片小的话,就会重复 */
+    background-image: url(:/icon/1.png);
+    /* 背景图像如何充满背景矩形，如果未指定此属性，背景图像将在两个方向上重复(repeat)。 */
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-position: top;
+    background-position: left;
+
+    /* 背景颜色 */
+    background-color: #f0f0f0;
+    /* 背景，相当于指定background-color、background-image、
+    background-repeat和background-position。 */
+    background: transparent;
+
+    /* 交替背景色 */
+    alternate-background-color: red;
+
+
+    /*背景图像是否相对于视口进行滚动或固定。默认情况下，背景图像随视口滚动。 */
+    background-attachment: fixed;
+
+    /* 如果背景是设置的颜色,则只有background-clip起作用,
+    如果设置的是backImage,则取决于background-clip和background-origin更小的哪个*/
+
+    /* 背景图像相对于什么来定位。如果未指定此属性，则默认为 padding 填充。
+    padding：背景图像相对于内边距框来定位
+    border：背景图像相对于边框盒来定位
+    content：背景图像相对于内容框来定位 */
+    background-origin: padding;
+    /*规定背景的绘制区域。如果未指定此属性，则默认为border。*/
+    /* border：背景被裁剪到边框盒 
+       padding：背景被裁剪到内边距框 
+       content：背景被裁剪到内容框 */
+    background-clip: border;
+
+
+
+}
+
+/* ----------------------------------------------------------------*/
+/* image  是设置图标, 类似设置icon 
+在子控件的内容矩形中绘制图像。image属性接受一个url列表或者一个svg。
+绘制的实际图像使用与QIcon相同的算法。图像从不放大，但在必要时总是缩小。
+如果指定了svg，则图像会被缩放为内容矩形的大小。警告：渲染SVG图像需要QIcon SVG插件。*/
+QToolButton {
+    image: url(:/icon/1.png);
+    image-position: left;
+}
+
+
+/* ----------------------------------------------------------------*/
+/* 可以设置主控件中的子控件的样式 代表"的"意思, 
+比如下面这个代表"设置日历控件上的ToolButton按钮"的样式,
+而不会设置日历控件外的ToolButton按钮的样式 */
+QCalendarWidget QToolButton {
+    background-color: rgb(255, 92, 255);
+}
+
+QCalendarWidget QTableView {
+    background-color: rgb(128, 140, 3);
+}
+
+/* ----------------------------------------------------------------*/
+/* 可以用逗号隔开,同时设置多个 */
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* ----------------------------------------------------------------*/
+/* top  left bottom  right  控件往相反方向移动,效果和padding差不多
+但是指的是当前控件在祖先元素中,与祖先的边界距离,一般用在处于别的元素内部的元素*/
+QSpinBox::up-button:hover {
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+}
+
+QSpinBox::down-button:hover {
+    bottom: -2px;
+}
+
+/* ----------------------------------------------------------------*/
+
+/* margin -top right bottom left     元素的4个外边距*/
+/* padding -topright  bottom left     元素内容区域与边框之间距离*/
+/* margin */
+/* position */
+QScrollBar::sub-line:horizontal {
+    /* 按钮的位置 */
+    subcontrol-position: right;
+}
+
+/* ----------------------------------------------------------------*/
+
+/* 文本 */
+QLabel {
+    /*  text-decoration*/
+    text-decoration: none;
+    /* 文本下划线 */
+    text-decoration: underline;
+    /* 文本上划线 */
+    text-decoration: overline;
+    /* 文本删除线 */
+    text-decoration: line-through;
+
+    /*  font*/
+    font: bold italic 13pt "STSong";
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial;
+    font-style: italic;
+
+    /*  文本对齐, 对label无效,label通过函数设置*/
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------*/
+
+/* border */
+QLabel {
+    border: 2px solid #67696B;
+    border-top: 2px solid #67696B;
+
+    /*  border-style*/
+    border-style: dotted;
+    border-style: dotted solid dashed double;
+    border-top-style: solid;
+    /*none - 没有边框，相当于border-width: 0;。
+    hidden - 相当于none，但在某些情况下（如表格）可能会隐藏重叠边框。
+    solid - 实线边框。
+    dotted - 虚点边框。
+    dashed - 虚线边框。
+    double - 双线边框。
+    groove - 创建一种凹槽效果，看起来像是雕刻在边框内。
+    ridge - 创建一种凸起效果，看起来像是雕刻在边框外。
+    inset - 使边框看起来像是嵌入元素内部。
+    outset - 使边框看起来像是突出于元素外部。
+    */
+
+    /*width*/
+    border-width: 2px;
+    border-top-width: 14px;
+
+    /*color*/
+    border-color: #FF0000 #00FF00 #0000FF #FFFF00;
+    border-top-color: #FF0000;
+    border-color: #FF0000;
+
+
+    /*radius*/
+    border-radius: 10px;
+    /* 横纵的圆角角度不一样,不是圆角, 是斜角*/
+    border-radius: 40px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 40px;
+
+
+    /* border-image 图片会充满控件*/
+    border-image: url(:/icon/1.png);
+}

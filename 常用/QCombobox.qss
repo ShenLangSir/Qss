@@ -1,0 +1,239 @@
+/*-----最好的方式还是自己写代理和listView,参考cbb*/
+/*-------------------------combobox-popup: 0*/
+QComboBox {
+    /*0是直接下拉,1会覆盖本身*/
+    combobox-popup: 0;
+    /*combox的背景色和下拉框的最底层背景色*/
+    background-color: #000000;
+    border-radius: 13px;
+    padding-left: 13px;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    /*combobox-popup: 0时只代表combobox的色不代表item的色*/
+    color: #012345;
+    /*combobox-popup: 0时这个参数没用*/
+    selection-background-color: #00FFFF;
+}
+
+QComboBox::disabled {
+    background-color: #999999;
+}
+
+/* 下拉菜单展开时的属性 */
+QComboBox:on {
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/*重新设置一下 让listview的背景消失 
+ui->comboBox->setView(new QListView());
+ui->comboBox->view()->window()->setAttribute(Qt::WA_TranslucentBackground); */
+QComboBox QAbstractItemView {
+    /*item的背景色*/
+    background-color: #FF0000;
+    /*整体list的圆角*/
+    border-radius: 5px;
+    margin-bottom: 5px;
+    /*item的色*/
+    color: #00FFFF;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/*设置了ui->comboBox->setView(new QListView());才有用*/
+QComboBox QAbstractItemView::item {
+    font-family: PingFang SC;
+    background-color: #00FF00;
+    font-weight: 500;
+    border: 3px;
+    color: #AAAAAA;
+    padding-left: 13px;
+    height: 28px;
+    /* 项的高度（设置pComboBox->setView(new QListView());后，该项才起作用） */
+}
+
+QComboBox QAbstractItemView::item:hover {
+    /*combobox-popup: 1时这个参数没用,combobox-popup: 0时 代表item悬浮时的背景色*/
+    background-color: #00FF00;
+    color: #FF00FF;
+}
+
+QComboBox QAbstractItemView::item::selected {
+    background-color: #00FF00;
+    color: #FF00FF;
+}
+
+/* 和QComboBox QAbstractItemView::item 作用一样,后面的会覆盖前面的 */
+QComboBox QListView::item {
+    background-color: rgb(156, 126, 145);
+}
+
+
+/* 下拉按钮(非图标)的内容设置*/
+QComboBox::drop-down {
+    background-color: rgb(255, 126, 145);
+    padding-top: 15px;
+    /*宽度设置无效*/
+    width: 133px;
+    /*边框设置有用*/
+    border-top-width: 14px;
+    /*边框设置不能设置颜色*/
+    border-top-color: rgb(255, 255, 255);
+    /*没什么用*/
+    right: 1px;
+    /*以下设置基本等同于对pushbutton的设置,但是基本没什么用*/
+    image: url(:/icon/1.png);
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+}
+
+/* 下拉箭头图标的内容设置,当drop-down没有设置背景色或者边框时,箭头受限于按钮的大小,反之,箭头好像是独立于按钮,覆盖在按钮上面*/
+QComboBox::down-arrow {
+    /* 下拉箭头区域的背景色,*/
+    background-color: rgb(156, 126, 145);
+    width: 13px;
+    /*边框设置有用*/
+    border-width: 6px;
+    /*边框设置不能设置颜色*/
+    border-top-color: rgb(0, 0, 255);
+    /*right的时候才有用,决定了总宽度*/
+    padding-right: 5px;
+    /*有用,相当于平常的padding-right,决定了平移*/
+    right: 5px;
+    /*以下设置基本等同于对pushbutton的设置,就用border-image就可以*/
+    image: url(:/icon/1.png);
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+}
+
+/* 下拉栏的滚动条区域的下层的widget */
+QComboBox QAbstractItemView #qt_scrollarea_vcontainer {
+    background: #1B1D24;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* 下拉栏的滚动条 */
+QComboBox QAbstractItemView QScrollBar::vertical {
+    width: 18px;
+    height: 207px;
+    background: #1B1D24;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 20px;
+    /*上预留位置（放置向上箭头）*/
+    padding-bottom: 20px;
+    /*下预留位置（放置向下箭头）*/
+}
+
+QComboBox QAbstractItemView QScrollBar::handle::vertical {
+    /*滑块主体*/
+    width: 14px;
+    height: 72px;
+    min-height: 72px;
+    background: #363946;
+    border-radius: 8px;
+    margin-left: 1px;
+    /*滑块与滑轨左边的距离*/
+    margin-right: 1px;
+    /*滑块与滑轨右边的距离*/
+}
+
+QComboBox QAbstractItemView QScrollBar::add-line::vertical {
+    image: url(:/scrolldown.png);
+}
+
+QComboBox QAbstractItemView QScrollBar::sub-line::vertical {
+    image: url(:/scrollup.png);
+}
+
+
+
+/*-------------------------combobox-popup: 1 ,没提到的同0*/
+QComboBox {
+    /*0是直接下拉,1会覆盖本身*/
+    combobox-popup: 1;
+    /*combobox-popup: 1时只是combox的背景色*/
+    background-color: #000000;
+    border-radius: 13px;
+    padding-left: 13px;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    /*combobox-popup: 1时 代表combobox和item的色*/
+    color: #FF0000;
+    /*combobox-popup: 1时 代表item悬浮时的背景色*/
+    selection-background-color: #00FFFF;
+}
+
+QComboBox::disabled {
+    background-color: #999999;
+}
+
+QComboBox QAbstractItemView {
+    /*item的背景色*/
+    background-color: #FF0000;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #00FFFF;
+    margin-top: 5px;
+    font-size: 14px;
+    /*下拉栏的最小宽度, 但是主要取决于item的宽度*/
+    min-width: 200px;
+}
+
+QComboBox QAbstractItemView::item {
+    font-family: PingFang SC;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    border: 0px;
+    color: #0000FF;
+    padding-left: 13px;
+    color: #A6BAC7;
+    height: 28px;
+    /* 项的高度（设置pComboBox->setView(new QListView());后，该项才起作用） */
+}
+
+QComboBox QAbstractItemView::item:hover {
+    /*combobox-popup: 1时这个参数没用,combobox-popup: 0时 代表item悬浮时的背景色*/
+    background-color: #00FF00;
+    color: #FF00FF;
+}
+
+/* 下拉按钮(非图标)的内容设置*/
+QComboBox::drop-down {
+    background-color: rgb(255, 126, 145);
+    padding-top: 15px;
+    /*宽度设置无效*/
+    width: 133px;
+    /*边框设置有用*/
+    border-top-width: 14px;
+    /*边框设置不能设置颜色*/
+    border-top-color: rgb(255, 255, 255);
+    /*没什么用*/
+    right: 1px;
+    /*以下设置基本等同于对pushbutton的设置,但是基本没什么用*/
+    image: url(:/icon/1.png);
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+}
+
+/* 下拉箭头图标的内容设置,当drop-down没有设置背景色或者边框时,箭头受限于按钮的大小,反之,箭头好像是独立于按钮,覆盖在按钮上面*/
+QComboBox::down-arrow {
+    /* 下拉箭头区域的背景色,*/
+    background-color: rgb(156, 126, 145);
+    width: 13px;
+    /*边框设置有用*/
+    border-width: 6px;
+    /*边框设置不能设置颜色*/
+    border-top-color: rgb(0, 0, 255);
+    /*right的时候才有用,决定了总宽度*/
+    padding-right: 5px;
+    /*有用,相当于平常的padding-right,决定了平移*/
+    right: 5px;
+    /*以下设置基本等同于对pushbutton的设置,就用border-image就可以*/
+    image: url(:/icon/1.png);
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+}

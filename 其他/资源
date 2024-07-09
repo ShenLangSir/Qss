@@ -1,0 +1,11 @@
+官方qss参考
+https://doc.qt.io/qt-6/stylesheet-reference.html
+
+CSS参考手册（里面有测试，可以很直观的看到不同属性值的区别）
+https://www.w3school.com.cn/cssref/pr_background-clip.asp
+
+官方用例
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qabstractscrollarea
+
+csdn 史上最全最详细的QSS样式表用法及用例说明
+https://blog.csdn.net/WL0616/article/details/129118087

@@ -1,0 +1,43 @@
+QTabWidget {
+    /*会被覆盖 没用*/
+    background: #FF0000;
+}
+
+/*pane区域*/
+QTabWidget::pane {
+    background: #00FF00;
+    border: none;
+    padding: 10px;
+    top: -0.5em;
+}
+
+
+QTabWidget::pane:hover {
+    background: #00FFFF;
+    border: none;
+    padding: 10px;
+}
+
+/*tab-bar标签旁的空白部分,但是测试没效果*/
+QTabWidget::left-corner {
+    background: #0000FF;
+    border: none;
+    padding: 10px;
+}
+
+QTabWidget::right-corner {
+    background: #0000FF;
+    border: none;
+    padding: 10px;
+}
+
+
+QTabWidget::tab-bar {
+    /*对齐方式 */
+    alignment: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    /*tab-bar的位置*/
+    subcontrol-position: right;
+
+}

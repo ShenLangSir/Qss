@@ -1,0 +1,22 @@
+ QToolBar {
+     border-left: 8px solid transparent;
+     border-right: 0px solid transparent;
+     border-top: 0px solid transparent;
+     border-bottom: 0px solid transparent;
+     spacing: 25px;
+ }
+
+ QToolBar::separator {
+     background-color: rgb(25, 25, 25);
+     width: 2px;
+     height: 8px;
+ }
+
+ QToolBar>QToolButton {
+     background: transparent;
+     border: 0px solid gray;
+ }
+
+ QToolBar>QToolButton::hover {
+     background-color: rgb(65, 65, 69);
+ }

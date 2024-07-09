@@ -1,0 +1,39 @@
+QListWidget::indicator {
+    padding: 0px -3px 0px 0px;
+}
+
+QListWidget::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QListWidget::indicator:unchecked {
+    image: url(:/icon/1.png);
+}
+
+QListWidget::indicator:disabled {
+    image: url(:/icon/2.png);
+}
+
+QListWidget::indicator:checked {
+    image: url(:/icon/3.png);
+}
+
+QListWidget::indicator:checked:disabled {
+    image: url(:/icon/4.png);
+}
+
+QListWidget::indicator:indeterminate {
+    image: url(:/icon/5.png);
+}
+
+QListWidget::indicator:indeterminate:disabled {
+    image: url(:/icon/6.png);
+}
+
+支持box model。启用交替行颜色后，可以使用属性alternative -background-color设置交替行颜色的样式。选中项的颜色和背景分别使用selection-color和selection-background-color设置样式。选择行为由show-decoration-selected属性控制。使用::item子控件对QListView中的项进行更细的控制。
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/WL0616/article/details/129118087

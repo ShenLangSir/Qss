@@ -1,0 +1,81 @@
+QComboBox {
+    combobox-popup: 0;
+    background-color: #3B3D47;
+    border-radius: 3px;
+    padding-left: 13px;
+    selection-background-color: #3B3D47;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #A6BAC7;
+}
+
+QComboBox::disabled {
+    color: #47484F;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #3B3D47;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+QComboBox QAbstractItemView::item {
+    font-family: PingFang SC;
+    font-weight: 500;
+    border: 0px;
+    padding-left: 13px;
+    background-color: #3B3D47;
+    color: #A6BAC7;
+    height: 28px;
+    /* 项的高度（设置pComboBox->setView(new QListView());后，该项才起作用） */
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #484A57;
+}
+
+QComboBox::drop-down {
+    width: 13px;
+    border: none;
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    right: 5px;
+}
+
+QComboBox::down-arrow {
+    border-image: url(:/icon/1.png);
+}
+
+QComboBox QListView::item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #A6BAC7;
+    height: 28px;
+    padding: 0px 0px 0px 4px;
+    background-color: #222226;
+    border: 0px;
+}
+
+QComboBox QListView::item::hover {
+    font-size: 14px;
+    font-weight: 400;
+    color: #A6BAC7;
+    height: 28px;
+    padding: 0px 0px 0px 4px;
+    background: rgba(63, 124, 243, 0.3);
+    border: 0px;
+
+}
+
+QComboBox QListView::item::selected {
+    font-size: 14px;
+    font-weight: 400;
+    color: #A6BAC7;
+    height: 28px;
+    padding: 0px 0px 0px 4px;
+    background: rgba(63, 124, 243, 0.3);
+    border: 0px;
+}

@@ -1,0 +1,196 @@
+看QSpinBox
+QDateEdit {
+    background: #1D1E21;
+    font-size: 14px;
+    font-family: "PingFang SC";
+    font-weight: 400;
+    border-radius: 5px;
+    color: #A6BAC7;
+    border-radius: 3px;
+    border: none;
+    width: 131px;
+    height: 28px;
+    padding: 0px 0px 0px 8px;
+}
+
+QDateEdit:focus {
+    border: 1px solid #67696B;
+}
+
+QDateEdit:hover {
+    border: 1px solid #67696B;
+}
+
+
+QDateEdit::disabled {
+    color: #3b3e40;
+}
+
+QDateEdit::up-button {
+    image: url(:/icon/1.png);
+    width: 10px;
+    height: 10px;
+    padding: 2px 5px 0px 0px;
+}
+
+QDateEdit::down-button {
+    image: url(:/icon/2.png);
+    width: 10px;
+    height: 10px;
+    padding: 0px 5px 2px 0px;
+}
+
+QDateEdit::up-button:pressed {
+    top: -2px;
+}
+
+QDateEdit::down-button:pressed {
+    bottom: -2px;
+}
+
+QDateEdit::drop-down {
+    width: 13px;
+    border: none;
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    right: 5px;
+}
+
+QDateEdit::down-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 0px;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left-color: #67696B;
+}
+
+/*背景色*/
+QCalendarWidget QTableView {
+    alternate-background-color: #31323B;
+    padding: 0px 0px 5px 0px;
+    background-color: #31323B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/*导航*/
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: #3D3E45;
+    min-height: 32px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*上个月*/
+QCalendarWidget QToolButton#qt_calendar_prevmonth {
+    background-color: #3D3E45;
+    qproperty-icon: url(://images/left.png);
+    left: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+}
+
+/*下个月*/
+QCalendarWidget QToolButton#qt_calendar_nextmonth {
+    background-color: #3D3E45;
+    qproperty-icon: url(://images/right.png);
+    right: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+}
+
+/*当前月*/
+QCalendarWidget QAbstractItemView:enabled {
+    selection-background-color: transparent;
+    selection-color: #FFFFFF;
+    color: #8C99A2;
+}
+
+/*其它月*/
+QCalendarWidget QAbstractItemView:disabled {
+    color: #5A666E;
+}
+
+/*月份工具按钮*/
+QCalendarWidget QToolButton#qt_calendar_monthbutton {
+    width: 80px;
+    left: 20px;
+    font-size: 14px;
+    color: #A6BAC7;
+    background-color: #3D3E45;
+}
+
+QCalendarWidget QToolButton#qt_calendar_yearbutton {
+    width: 80px;
+    left: 20px;
+    font-size: 14px;
+    color: #A6BAC7;
+    background-color: #3D3E45;
+}
+
+QCalendarWidget QToolButton::menu-indicator {
+    subcontrol-origin: margin;
+    subcontrol-position: right center;
+    image: url(:/icon/1.png);
+    right: 5px;
+}
+
+QCalendarWidget QMenu {
+    width: 80px;
+    left: 20px;
+    color: #A6BAC7;
+    font-size: 14px;
+    background-color: #0D0D0D;
+    selection-background-color: #3C4245;
+}
+
+QCalendarWidget QMenu::item {
+    width: 80px;
+    padding: 0px 0px 0px 20px;
+    color: #A6BAC7;
+    font-size: 14px;
+    height: 28px;
+    background-color: #0D0D0D;
+    selection-background-color: #3C4245;
+}
+
+QCalendarWidget QMenu::item:selected {
+    background-color: #3C4245;
+    color: #FFFFFF;
+    /* 文本颜色 */
+}
+
+QCalendarWidget QSpinBox {
+    padding: 0px 10px 0px 10px;
+    width: 50px;
+    color: #A6BAC7;
+    font-size: 14px;
+    background-color: #3D3E45;
+    selection-background-color: rgb(136, 136, 136);
+    selection-color: rgb(255, 255, 255);
+}
+
+QCalendarWidget QSpinBox::up-button {
+    subcontrol-origin: margin;
+    subcontrol-position: top right;
+    image: url(:/icon/2.png);
+    right: 5px;
+}
+
+QCalendarWidget QSpinBox::down-button {
+    subcontrol-origin: margin;
+    subcontrol-position: bottom right;
+    image: url(:/icon/3.png);
+    right: 5px;
+}

@@ -1,0 +1,27 @@
+QHeaderView {
+    color: white;
+    max-height: 48px;
+    min-height: 48px;
+    background-color: #333336;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 800;
+}
+
+QHeaderView::section {
+    /*覆盖上面的文字颜色*/
+    color: #EBEDF9;
+}
+
+QHeaderView::section:checked {
+    background-color: red;
+}
+
+/* style the sort indicator */
+QHeaderView::down-arrow {
+    image: url(down_arrow.png);
+}
+
+QHeaderView::up-arrow {
+    image: url(up_arrow.png);
+}

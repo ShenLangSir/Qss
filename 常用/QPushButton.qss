@@ -1,0 +1,89 @@
+QPushButton {
+    background: #6562FC;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 5px 0px rgba(77, 75, 82, 0.16), 0px 2px 0px 0px #9290FF;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #E3E4F2;
+    line-height: 26px;
+    border: transparent;
+    /*一般用这个属性来设置图片*/
+    border-image: url(:/icon/1.png);
+
+    background-image: url(:/icon/1.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /*必须同时有border设置*/
+    image: url(:/icon/7.png);
+    image-position: left;
+    text-align: left;
+}
+
+QPushButton:hover {
+    color: #A2A1FD;
+}
+
+QPushButton:pressed {
+    color: #A2A1FD;
+}
+
+QPushButton:disabled {
+    color: #646369;
+}
+
+QPushButton:checked {
+    color: #646369;
+}
+
+QPushButton:unchecked {
+    color: #646369;
+}
+
+QPushButton:flat {
+    color: #646369;
+}
+
+/* 带menu的按钮,下拉菜单处于打开状态 */
+QPushButton:open {
+    color: #646369;
+}
+
+/* 带menu的按钮,下拉菜单处于关闭状态 */
+QPushButton:closed {
+    color: #646369;
+}
+
+/*有设置菜单事,下拉按钮的样式*/
+QPushButton::menu-indicator {
+    subcontrol-origin: margin;
+    subcontrol-position: right center;
+    image: url(:/personalcenter/personalcenter/dropdown.png);
+}
+
+
+/* 警告：如果你只在一个QPushButton上设置了背景色，背景可能不会出现，
+除非你设置了border属性为某个值。这是因为，
+在默认情况下，QPushButton绘制了一个与背景色完全重叠的本机边框。*/
+
+
+
+/* 设置按钮image 
+QPushButton中,如果想要`设置image`,必须设置下border相关的内容
+border相关的内容包括:
+{
+    border: none;  
+    border-radius :
+}
+这样设置image是无效的
+QPushButton
+{
+    image: url(:/icon/7.png); 
+}
+这样设置是有效的,增加了border: none或者 border-radius :
+QPushButton
+{
+    image: url(:/icon/7.png); 
+    border: none;  
+}

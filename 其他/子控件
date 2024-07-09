@@ -1,0 +1,42 @@
+#子控件
+###子控件是双冒号"::"
+###对于一些复杂的部件修改样式，可能需要访问它们的子部件，如QComboBox的下拉按钮，QSpinBox的向上、向下箭头灯。
+###如：下拉按钮设置图片属性：QComboBox::drop-down{image:url(dropdown.png)}
+
+子控件		         描述
+::add-line		    在QScrollBar中跳转下一行的按钮
+::add-page		    在QScrollBar中滑动条和add-line之间的区域
+::branch		    在QTreeView中的分支指示器
+::chunk		        在QProgressBar中的进度块
+::close-button	    在QDockWidget或QTabBar选项卡的关闭按钮
+::corner		    在QAbstractScrollArea中两个滚动条之间的角落
+::down-arrow	    在QComboBox、QHeaderView(排序指示器)、QScrollBar或QSpinBox的向下箭头
+::down-button	    在QScrollBar或QSpinBox中的向下按钮
+::drop-down		    在QComboBox中的下拉框
+::float-button	     在QDockWidget中的浮动按钮
+::groove		    在QSlider中的滑动槽
+::indicator		    在QAbstractItemVIew、QCheckBox、QRadioButton、可选中的菜单项或可选中的QGroupBox中的指示器
+::handle		    在QScrollBar、QSplitter和QSlider中的操作条(滑动条)
+::icon	    	    在QAbstractItemVIew或QMenu中的图标
+::item		        在QAbstractItemVIew、QMenuBar、QMenu或QStatuBar中的一项
+::left-arrow	    在QScrollBar中的向左箭头
+::left-corner	    在QTabWidget中的左上角
+::menu-arrow	    带有菜单的QToolButton中的箭头 
+::menu-butto	    在QToolButton中的菜单按钮
+::menu-indicator    在QPushButton中的菜单指示器
+::right-arrow	    在QMenu或QScrollBar中的向右箭头
+::pane		        在QTabWidget中的边或框
+::right-corner	    在QTabWidget中的右上角
+::scroller		    在QMenu或QTabBar中的滚动条
+::section		    在QHeaderView中的区块
+::separator		    在QMenu或QMainWIndow中分隔条
+::sub-line		    在QScrollBar中跳转上一行的按钮
+::sub-page		    在QScrollBar中滑动条和sub-line之间的区域
+::tab		        在QTabBar或QToolBox中选项卡
+::tab-bar		    在QTabWidget中的选项卡栏
+::tear		        在QTabBar中的tear指示器
+::tearoff		    在QMenu中的tear-off指示器
+::text		        在QAbstractItemView中的文本
+::title		        在QGroupBox或QDockWidget中的标题栏
+::up-arrow		    在QComboBox、QHeaderView(排序指示器)、QScrollBar或QSpinBox的向上箭头
+::up-button		    在QScrollBar或QSpinBox中的向上按钮

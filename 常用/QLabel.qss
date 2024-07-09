@@ -1,0 +1,19 @@
+QLabel {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1c7cd6;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    background-image: url(:/path/to/image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: underline;
+}
+
+/* 不支持:hover伪状态 */

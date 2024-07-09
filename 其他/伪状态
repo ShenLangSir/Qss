@@ -1,0 +1,54 @@
+#伪状态
+##伪状态使用单冒号":"
+###选择器可以使用状态来限制在部件的指定状态上的应用。伪状态在选择器之后，用冒号隔离。如：
+###鼠标悬停在按钮上时其按钮的颜色为白色：QPushButton:hover{color:white}
+###鼠标不悬停在按钮上时其按钮的颜色为l蓝色(!表否定)：QPushButton:!hover{color:blue}
+###伪状态可多个连用，达到逻辑与效果。如：
+###鼠标悬停在一个被选中的QCheckBox部件上时才应用规则：QCheckBox:hover:checked{color:white}
+###伪状态可通过逗号达到逻辑或效果。如：QCheckBox:hover,checked{color:white}
+###伪状态和子部件联合使用。如：QComboBox::drop-down:hover{image:url(dropdown_bright.png)}
+伪状态			    描述
+:active			    此状态在小部件驻留在活动窗口时设置
+:adjoins-item		此状态在QTreeView的::branch与一个item相邻时设置
+:alternate			当QAbstractItemView::alternatingRowColors()设置为真时，在绘制QAbstractItemView的行时，为每个交替行设置此状态
+:bottom			    此item位于底部。例如，QTabBar有位于底部的选项卡
+:checked			此item被选中。例如，QAbstractButton的checked状态
+:closable			此item可以被关闭。例如，QDockWidget的QDockWidget::DockWidgetClosable特性开启时
+:closed			    此item处于关闭状态。例如，QTreeView中未展开的item
+:default			此item的默认状态。例如，一个default的QPushButton或QMenu中的一个默认动作
+:disabled			此item被禁用时的状态
+:editable			如QComboBox是可编辑的
+:edit-focus			此item具有编辑焦点(参考QStyle::State_HasEditFocus)。此状态仅对Qt扩展应用程序可用
+:enabled			此item已启用
+:exclusive			此item是一个独占项组的一部分。例如，独占QActionGroup中的菜单项
+:first			     此item是列表中的第一项。例如，QTabBar中的第一个选项卡
+:flat			     此item是平的。例如，一个扁平的QPushButton
+:floatable			 此item可以浮动。例如，QDockWidget的QDockWidget::DockWidgetFloatable的特性开启时
+:focus			    此item具有输入焦点
+:has-children		此item具有子对象。例如，QTreeView中具有子项的项
+:has-sibling		此item具有兄弟对象。例如，QTreeView中与之相邻的项
+:horizontal			此item处于水平方向
+:hover			    鼠标悬浮在此item上
+:indeterminate		此item处于不确定状态。例如，QCheckBox或QRadioButton被部分选中
+:last			    此item是列表中的最后一项。例如，QTabBar中的最后一个选项卡
+:left			    此item位于左侧。例如，QTabBar有位于左侧的选项卡
+:maximized			此item处于最大化状态。例如，一个最大化的QMdiSubWindow
+:middle			    此item是列表中的中间一项。例如，一个不在QTabBar中的开头或结尾的选项卡
+:minimized			此item处于最小化状态。例如，一个最小化的QMdiSubWindow
+:movable			此item可以被移动。例如， QDockWidget的QDockWidget::DockWidgetMovable特性开启时
+:no-frame			此item没有边框。例如，没有边框的QSpinBox或QLineEdit
+:non-exclusive		此item是一个非独占项组的一部分。例如，非独占QActionGroup中的菜单项
+:off			    对可以切换的items，这适用于处于off状态的item
+:on			        对可以切换的items，这适用于处于on状态的widget
+:only-one			此item是列表中的唯一的一项。例如，一个在QTabBar中单独的选项卡
+:open		    	此item处于打开状态。例如，QTreeView中的展开项，或带有菜单的QComboBox或QPushButton
+:next-selected		此item是列表中的下一个被选中的项。例如，在QTabBar中当前选项卡的下一个要选中的选项卡
+:pressed			鼠标正在按压在此item上
+:previous-selected	此item是列表中的上一个被选中的项。例如，在QTabBar中当前选项卡的上一个要选中的选项卡
+:read-only			此item处于只读或不可编辑状态。例如，一个只读QLineEdit或不可编辑的QComboBox
+:right			    此item位于右侧。例如，QTabBar有位于右侧的选项卡
+:selected			此item处于选中状态。例如，一个在QTabBar中被选中的选项卡或一个在菜单中被选中的菜单项
+:top		    	此item位于顶部。例如，QTabBar有位于顶部的选项卡
+:unchecked			此item处于未被选中状态
+:vertical			此item处于垂直方向
+:window			    小部件是一个窗口(例如，一个顶层小部件)

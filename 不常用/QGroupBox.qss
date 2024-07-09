@@ -1,0 +1,44 @@
+QGroupBox {
+    border: 1px solid #67696B;
+    border-radius: 5px;
+    margin-top: 3ex;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    position: relative;
+    left: 10px;
+}
+
+QGroupBox::indicator {
+    padding: 0px -3px 0px 0px;
+}
+
+QGroupBox::indicatorr {
+    width: 13px;
+    height: 13px;
+}
+
+QGroupBox::indicator:unchecked {
+    image: url(:/icon/1.png);
+}
+
+QGroupBox::indicator:unchecked:disabled {
+    image: url(:/icon/2png);
+}
+
+QGroupBox::indicator:checked {
+    image: url(:/icon/3.png);
+}
+
+QGroupBox::indicator:checked:disabled {
+    image: url(:/icon/4.png);
+}
+
+QGroupBox::indicator:indeterminate {
+    image: url(:/icon/5.png);
+} 
+
+QGroupBox::indicator:indeterminate:disabled {
+    image: url(:/icon/6.png);
+}

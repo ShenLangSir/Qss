@@ -1,0 +1,41 @@
+/*设置轨道*/
+QSlider::groove:horizontal {
+    border: 0px solid #999999;
+    height: 4px;
+    /* background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.7, stop:0 #fff, stop:1 #ccc); */
+    margin: 0px;
+    /*轨道相对于边界的padding*/
+    left: 0px;
+    /*滑块相对于轨道的边距*/
+    padding-left: 0px;
+}
+
+/*设置滑块*/
+QSlider::handle:horizontal {
+    border: 0px;
+    /*borderimage会模糊*/
+    image: url(:/tool/滑块.png);
+    height: 12px;
+    width: 12px;
+    /*相对于轨道的大小,如果为0 则和轨道一样高*/
+    margin: -4px -4px -4px -4px;
+}
+
+QSlider::handle:horizontal:hover {
+    border-image: url(:/tool/滑块-高亮.png);
+}
+
+QSlider::handle:horizontal:pressed {
+    border-image: url(:/tool/滑块-按下和拖动.png);
+}
+
+/*未被滑块覆盖的区域*/
+QSlider::add-page:horizontal {
+    background: #545C61;
+}
+
+/*滑块覆盖的区域*/
+QSlider::sub-page:horizontal {
+    background: #15A49C;
+
+}

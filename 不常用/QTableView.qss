@@ -1,0 +1,49 @@
+QTableView {
+    border: 1px solid #67696B;
+    selection-background-color: #262829;
+    selection-color: #BEC0C2;
+    alternate-background-color: #262829;
+    gridline-color: #67696B;
+    /*线的颜色*/
+    gridline-color: red;
+}
+启用交替行颜色后，可以使用属性alternative-background-color设置交替行颜色的样式。选中项的颜色和背景分别使用selection-color和selection-background-color设置样式。QTableView中的拐角部件是作为QAbstractButton实现的，可以使用“QTableView QTableCornerButton::section”选择器设置样式。
+警告：如果你只在QTableCornerButton上设置了背景色，背景可能不会出现，除非你设置border属性为某个值。这是因为，在默认情况下，QTableCornerButton绘制了一个完全重叠背景色的本机边框。网格的颜色可以使用gridline-color属性指定。
+QTableView {
+    background: #2E2F30;
+}
+
+QTableView::item:selected {
+    color: #BEC0C2;
+}
+
+QTableView::item:hover {
+    color: #BEC0C2;
+}
+
+QTableView::item {
+    padding: 1px;
+    margin: 0px;
+}
+
+QTableView QLineEdit,
+QTableView QComboBox,
+QTableView QSpinBox,
+QTableView QDoubleSpinBox,
+QTableView QDateEdit,
+QTableView QTimeEdit,
+QTableView QDateTimeEdit {
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+QTableView QLineEdit:focus,
+QTableView QComboBox:focus,
+QTableView QSpinBox:focus,
+QTableView QDoubleSpinBox:focus,
+QTableView QDateEdit:focus,
+QTableView QTimeEdit:focus,
+QTableView QDateTimeEdit:focus {
+    border-width: 0px;
+    border-radius: 0px;
+}

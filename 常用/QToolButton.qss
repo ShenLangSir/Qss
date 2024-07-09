@@ -1,0 +1,74 @@
+/* 设置 ToolButtonStyle  调整图标(icon)和文字的位置*/
+QToolButton {
+    background: #6562FC;
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #E3E4F2;
+    line-height: 26px;
+    border: transparent;
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    /* image和ToolButton的icon是两回事,可以共存 */
+    image: url(:/icon/7.png);
+    /*必须同时有border设置*/
+    image-position: left;
+    /*设置无效,可以通过代码设置*/
+    text-align: left;
+}
+
+QToolButton::hover {
+    color: #646369;
+}
+
+QToolButton::pressed {
+    color: #646369;
+}
+
+QToolButton:disabled {
+    color: #646369;
+}
+
+/* 子控件指示器 必须在 popupMode == menuButtonPopup */
+QToolButton::menu-indicator {
+    image: url(:/icon/1.png);
+}
+
+/* 绘制下拉按钮,必须同时设置menu-indicator */
+QToolButton::menu-button {
+    background: #AAAAAA;
+}
+
+/* 绘制下拉按钮上的箭头,,必须同时设置menu-indicator和menu-button */
+QToolButton::menu-arrow {
+    image: url(:/icon/2.png);
+}
+
+
+/* 警告：如果你只在一个QPushButton上设置了背景色，背景可能不会出现，
+除非你设置了border属性为某个值。这是因为，
+在默认情况下，QPushButton绘制了一个与背景色完全重叠的本机边框。*/
+
+
+/* 设置按钮image 
+QPushButton中,如果想要`设置image`,必须设置下border相关的内容
+border相关的内容包括:
+{
+    border: none;  
+    border-radius :
+}
+这样设置image是无效的
+QPushButton
+{
+    image: url(:/icon/7.png); 
+}
+这样设置是有效的,增加了border: none或者 border-radius :
+QPushButton
+{
+    image: url(:/icon/7.png); 
+    border: none;  
+}

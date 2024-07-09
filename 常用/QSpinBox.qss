@@ -1,0 +1,69 @@
+/*  QDoubleSpinBox  和  QSpinBox 一样*/
+/*  QSpinBox  */
+QSpinBox {
+    background: #2E2F30;
+    border: 1px solid #67696B;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+QSpinBox:hover {
+    background-color: rgb(255, 255, 128);
+}
+
+QSpinBox:focus {
+    background-color: rgb(255, 22, 255);
+}
+
+QSpinBox::up-button {
+    image: url(:/icon/5.png);
+    width: 30px;
+    height: 30px;
+    padding: 2px 5px 0px 0px;
+}
+
+QSpinBox::up-button:hover {
+    top: -2px;
+}
+
+QSpinBox::up-button:pressed {
+    top: -2px;
+}
+
+
+/* 下拉箭头图标的内容设置,如果不设置的话,也可以直接用down-button设置的,设置的话会覆盖在button上面*/
+QSpinBox::up-arrow {
+    /* 下拉箭头区域的背景色,*/
+    background-color: rgb(156, 126, 145);
+    width: 13px;
+    /*边框设置有用*/
+    border-width: 6px;
+    /*边框设置不能设置颜色*/
+    border-top-color: rgb(0, 0, 255);
+    /*right的时候才有用,决定了总宽度*/
+    padding-right: 5px;
+    /*有用,相当于平常的padding-right,决定了平移*/
+    right: 5px;
+    /*以下设置基本等同于对pushbutton的设置,就用border-image就可以*/
+    image: url(:/icon/1.png);
+    border-image: url(:/icon/1.png);
+    background-image: url(:/icon/1.png);
+}
+
+QSpinBox::down-button {
+    image: url(:/icon/5.png);
+    width: 30px;
+    height: 30px;
+    background-color: rgb(156, 126, 145);
+    padding: 0px 5px 2px 0px;
+}
+
+
+QSpinBox::down-button:hover {
+    bottom: -2px;
+}
+
+
+QSpinBox::down-button:pressed {
+    bottom: -2px;
+}
