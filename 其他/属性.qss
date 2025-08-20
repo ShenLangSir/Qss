@@ -74,7 +74,8 @@ QToolButton {
 /* image  是设置图标, 类似设置icon 
 在子控件的内容矩形中绘制图像。image属性接受一个url列表或者一个svg。
 绘制的实际图像使用与QIcon相同的算法。图像从不放大，但在必要时总是缩小。
-如果指定了svg，则图像会被缩放为内容矩形的大小。警告：渲染SVG图像需要QIcon SVG插件。*/
+如果指定了svg，则图像会被缩放为内容矩形的大小。警告：渲染SVG图像需要QIcon SVG插件。
+image的位置也会受到padding的影响*/
 QToolButton {
     image: url(:/icon/1.png);
     image-position: left;

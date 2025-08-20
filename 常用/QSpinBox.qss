@@ -16,6 +16,7 @@ QSpinBox:focus {
 }
 
 QSpinBox::up-button {
+    /* 一定是image不是borderimage,*/
     image: url(:/icon/5.png);
     width: 30px;
     height: 30px;

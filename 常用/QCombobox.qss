@@ -3,7 +3,7 @@
 QComboBox {
     /*0是直接下拉,1会覆盖本身*/
     combobox-popup: 0;
-    /*combox的背景色和下拉框的最底层背景色*/
+    /*combox的背景色和下拉框的最底层背景色,必须设置border背景色才生效*/
     background-color: #000000;
     border-radius: 13px;
     padding-left: 13px;
@@ -74,7 +74,7 @@ QComboBox QListView::item {
 QComboBox::drop-down {
     background-color: rgb(255, 126, 145);
     padding-top: 15px;
-    /*宽度设置无效*/
+    /*宽度设置无效,有时候有效?*/
     width: 133px;
     /*边框设置有用*/
     border-top-width: 14px;

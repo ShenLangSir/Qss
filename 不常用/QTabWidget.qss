@@ -3,11 +3,13 @@ QTabWidget {
     background: #FF0000;
 }
 
-/*pane区域*/
+/*pane区域(main区域)*/
 QTabWidget::pane {
+    /*当padding为0 时  会被完全挡住*/
     background: #00FF00;
     border: none;
     padding: 10px;
+    /*相当于margin-top*/
     top: -0.5em;
 }
 
@@ -32,12 +34,14 @@ QTabWidget::right-corner {
 }
 
 
+/*tab-bar=所有tab标签的整体*/
 QTabWidget::tab-bar {
     /*对齐方式 */
     alignment: center;
     margin-top: 7px;
     margin-bottom: 7px;
-    /*tab-bar的位置*/
+    /*整体tab-bar的位置*/
     subcontrol-position: right;
-
 }
+
+/*tab-bar内部每个item的设置见QTabBar的样式表*/

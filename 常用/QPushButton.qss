@@ -17,8 +17,8 @@ QPushButton {
     background-position: bottom right;
     /*必须同时有border设置*/
     image: url(:/icon/7.png);
-    image-position: left;
-    text-align: left;
+    image-position: left top;
+    text-align: left top;
 }
 
 QPushButton:hover {
@@ -61,6 +61,21 @@ QPushButton::menu-indicator {
     subcontrol-position: right center;
     image: url(:/personalcenter/personalcenter/dropdown.png);
 }
+
+/*绘制一个左/右带图标的按钮*/
+QPushButton {
+    border-radius: 12px;
+    padding-left: 85px;
+    padding-right: 85px;
+    image: url(:/startanalysis.png);
+    /*图标在文字右侧  */
+    image-position: right center;
+    text-align: left center;
+    /*图标在文字左侧  */
+    image-position: left center;
+    text-align: right center;
+}
+
 
 
 /* 警告：如果你只在一个QPushButton上设置了背景色，背景可能不会出现，

@@ -1,13 +1,20 @@
+/*-------------------------横向*/
 /*设置轨道*/
+QSlider:horizontal {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 QSlider::groove:horizontal {
     border: 0px solid #999999;
     height: 4px;
     /* background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.7, stop:0 #fff, stop:1 #ccc); */
     margin: 0px;
-    /*轨道相对于边界的padding*/
+    /*轨道相对于边界的padding,一般调这个就行*/
     left: 0px;
+    right: 0px;
     /*滑块相对于轨道的边距*/
-    padding-left: 0px;
+    padding-left: 5px;
+    padding-right: 5px; /*这个值要等于handle-margin*/
 }
 
 /*设置滑块*/
@@ -18,7 +25,7 @@ QSlider::handle:horizontal {
     height: 12px;
     width: 12px;
     /*相对于轨道的大小,如果为0 则和轨道一样高*/
-    margin: -4px -4px -4px -4px;
+    margin: -5px -5px -5px -5px;   /*这个值*2然后加上*滑轨宽(高)度应该等于滑块的宽(高)度,5*2+2=12*/
 }
 
 QSlider::handle:horizontal:hover {
@@ -32,10 +39,49 @@ QSlider::handle:horizontal:pressed {
 /*未被滑块覆盖的区域*/
 QSlider::add-page:horizontal {
     background: #545C61;
+    border-radius: 2px;
 }
 
 /*滑块覆盖的区域*/
 QSlider::sub-page:horizontal {
     background: #15A49C;
+    border-radius: 2px;
+}
 
+/*-------------------------纵向*/
+QSlider:vertical {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+QSlider::groove:vertical {
+    border: 0px solid #999999;
+    /* 滑轨宽度 */
+    width: 2px;
+    /* background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.7, stop:0 #fff, stop:1 #ccc); */
+    margin: 0px;
+    /*轨道相对于边界的padding,一般调这个就行*/
+    top: 0px;
+    bottom: 0px;
+    /*滑块相对于轨道的边距*/
+    padding-top: 4px;
+    padding-bottom: 4px;     /*这个值要等于handle-margin*/
+}
+
+QSlider::handle:vertical {
+    border: 0px;
+    /*borderimage会模糊*/
+    image: url(:/tool/滑块.png);
+    background-color: #6699cc;
+    height: 12px;
+    width: 12px;
+    /*相对于轨道的大小,如果为0 则和轨道一样高*/
+    margin: -5px -5px -5px -5px;   /*这个值*2然后加上*滑轨宽(高)度应该等于滑块的宽(高)度,5*2+2=12*/
+}
+
+QSlider::add-page:vertical {
+    background: #545C61;
+}
+
+QSlider::sub-page:vertical {
+    background: #15A49C;
 }
